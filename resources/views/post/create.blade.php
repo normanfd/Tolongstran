@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <form class="" action="{{ route('post.store') }}" method="post">
+    <form class="" action="{{ route('post.store') }}" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
         <div class="form-group">
             <label for="">Nama Barang</label>
@@ -27,6 +27,13 @@
             <label for="">Jumlah Barang</label>
             <input type="integer" class="form-control" name="jbarang">
         </div>
+        
+        <div class="row">
+            <div class="input-field col s6">
+                <input type="file" name="gambar" class="validate"/ >
+            </div>
+        </div>
+        
         <div class="form-group">
             <input type='submit' class='btn btn-primary' value="save">
         </div>

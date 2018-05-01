@@ -22,7 +22,7 @@ class CreatePostsTable extends Migration
             $table->text('deskripsi');
             $table->integer('jbarang');/**jumlah stok barang */
             $table->integer('hbarang');/**harga barang */
-            /**tambahin kolom gambar */
+            $table->string('gambar');
             $table->timestamps();
             
             $table->foreign('category_id')
