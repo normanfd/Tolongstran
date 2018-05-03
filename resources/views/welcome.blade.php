@@ -13,13 +13,18 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #d9ffb3;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
             }
+			
+			h2{
+				font-family:sans-serif;
+				
+			}
 
             .full-height {
                 height: 100vh;
@@ -82,9 +87,9 @@
 
                 <div class="container-fluid">
                         <div class="title m-b-md">
-                            Tolongstran
+                           <img src="img/kerdus2.png" class="card-img-top" height=""> <img src="img/tsss.png" class="card-img-top"> 
                         </div>    
-                    <div class="jumbotron">
+                    <div class="jumbotron" id="tulisan">
                         <h2>Silahkan Register/Login terlebih dahulu menggunakan ID IPB untuk menggunakan fitur Aplikasi web ini.</h2>
                     </div>
                 </div>
