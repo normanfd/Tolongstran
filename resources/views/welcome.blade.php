@@ -13,13 +13,18 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #d9ffb3;
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                font-family: 'Arial';
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
             }
+			
+            h2{
+                font-family: 'Arial';
+            }
+			
 
             .full-height {
                 height: 100vh;
@@ -82,10 +87,10 @@
 
                 <div class="container-fluid">
                         <div class="title m-b-md">
-                            Tolongstran
+                           <img src="img/logo.png" height="200px" class="card-img-top" height="">  
                         </div>    
-                    <div class="jumbotron">
-                        <h2>Silahkan Register/Login terlebih dahulu menggunakan ID IPB untuk menggunakan fitur Aplikasi web ini.</h2>
+                    <div class="jumbotron" id="tulisan">
+                        <h2>"Feel easy to make good event in Bogor Agricultural University"</h2>
                     </div>
                 </div>
             </div>
