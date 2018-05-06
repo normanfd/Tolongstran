@@ -16,11 +16,8 @@
 		<div class="col-sm-3">
 			<div class="card">
                 <img class="card-img-top" src="https://www.masterkantor.com/wp-content/uploads/2017/03/Kursi-Susun-Chitose-Caesar.jpg" alt="Meja">
-<<<<<<< HEAD
 			<div class="card-body">
-=======
                 <div class="card-body">
->>>>>>> d8bfb1e85f093eb9bea72f85281451491bb6214d
 					<h5 class="card-title">Meja</h5>
 					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 					<a href="#" class="btn btn-primary">Go somewhere</a>
