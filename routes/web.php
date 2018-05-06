@@ -22,11 +22,4 @@ Route::get('/post/{post}/edit', 'PostController@edit')->name('post.edit');
 Route::patch('/post/{post}/edit', 'PostController@update')->name('post.update');
 Route::delete('/post/{post}/delete', 'PostController@destroy')->name('post.destroy');
 
-//profil
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/home', 'HomeController@index')->name('home');
-    Route::get('dashboard','HomeController@index');
-    Route::view('myaccount', 'myaccount.index');
-    
-
-  });
+Route::get('/myaccount', 'myaccountController@myaccount')->name('myaccount');
