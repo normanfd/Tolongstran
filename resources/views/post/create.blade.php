@@ -56,16 +56,14 @@
             </div>
         </div>
         
-        <div class="row">
-            <div class="input-field col s6">
+        <div class="form-group">
+            <div class="input-field">
                 <input type="file" name="gambar" class="validate{{ $errors->has('gambar') ? ' is-invalid' : '' }}"  value="{{ old('gambar') }}" required autofocus >
             </div>
         </div>
-        
         <div class="form-group">
-            <input type='submit' class='btn btn-primary' value="save">
+           <input type='submit' class='btn btn-primary' value="save">
         </div>
-    
     </form>
 </div> 
 @endsection
