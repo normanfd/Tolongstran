@@ -17,7 +17,7 @@ class PostController extends Controller
         return view('post.create',compact('categories'));
     }
     public function show (Post $post) {
-        return view('post.show', compact('post'));
+        return view('post.show', compact('post')); }
 
     public function store(Request $request)
     {
@@ -35,24 +35,26 @@ class PostController extends Controller
             
         return redirect('/home');
     }
-    public function edit(Post $post){
-        
-        $categories= Category::all();
-        return view ('post.edit',  compact('post','categories'));
-    }
+    public function furniture(){
+        $posts=post::where('category_id', 1)-> get();
+        return  view('post.indextoreadfurniture',compact('posts')); }
+    
+    public function kostum(){
+        $posts=post::where('category_id', 5)-> get();
+        return  view('post.indextoreadkostum',compact('posts')); }
 
-    public function update (Post $post) {
+    public function tenda(){
+       $posts=post::where('category_id', 4)-> get();
+        return  view('post.indextoreadtenda',compact('posts')); }
 
-        $post ->update ([
-            'title'=> request('title'),
-            'content'=> request('content'),
-            'category_id' => request('category_id')
-        ]);
-            return redirect() ->route('post.index')->withInfo('Post diubah');
-    }
-    public function show (Post $post) {
-        return view('post.show', compact('post'));
-    }
+    public function musik(){
+       $posts=post::where('category_id', 6)-> get();
+        return  view('post.indextoreadmusik',compact('posts')); }
+    
+    public function elektronik(){
+       $posts=post::where('category_id', 3)-> get();
+        return  view('post.indextoreadelektronik',compact('posts')); }
     
 }
+
 
