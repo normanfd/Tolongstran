@@ -33,7 +33,7 @@
                 <img class="card-img-top" src="img/musik.png" alt="Card image cap">
                 <div class="card-body">
 					<h5 class="card-title">Musik</h5>
-					<p class="card-text">Cari alat musik seperti gitar, biola atau alat musik lainnya untuk acara kalian? cari disini.</p>
+					<p class="card-text">Cari alat musik seperti gitar, biola, dan alat musik lainnya untuk acara kalian? cari disini.</p>
 					<a href="{{ route ('musik')}} " class="btn btn-primary">Go somewhere</a>
 				</div>
 			</div>
