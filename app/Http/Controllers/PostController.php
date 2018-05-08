@@ -43,18 +43,22 @@ class PostController extends Controller
         return redirect('/home');
     }
     public function furniture(){
+        $posts=post::all();
         $posts=post::where('category_id', 1)-> get();
         return  view('post.indextoreadfurniture',compact('posts')); }
     
     public function kostum(){
+        $posts=post::all();
         $posts=post::where('category_id', 5)-> get();
         return  view('post.indextoreadkostum',compact('posts')); }
 
     public function tenda(){
+        $posts=post::all();
        $posts=post::where('category_id', 4)-> get();
         return  view('post.indextoreadtenda',compact('posts')); }
 
     public function musik(){
+        $posts=post::all();
        $posts=post::where('category_id', 6)-> get();
         return  view('post.indextoreadmusik',compact('posts')); }
     
