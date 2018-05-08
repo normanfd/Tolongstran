@@ -57,7 +57,6 @@ html,body{
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
                             <li><a class="nav-link" href="{{ route('post.create') }}">Post Barang</a></li>
-			    <li><a class="nav-link" href="{{ route('post.create') }}">Post Barang</a></li>
                             <li><a class="nav-link" href="#">List Pinjaman</a></li>
                             <li><a class="nav-link" href="#">Aset Saya</a></li>
                             <li class="nav-item dropdown">

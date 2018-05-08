@@ -8,7 +8,7 @@
                 
 			        <div class="card" style="width:1100px;height:500px;">
                     <div class="card-body">
-                    <img src="storage/{{$post->gambar}}" alt="Gambar" height="128">
+                    <img src="../storage/{{$post->gambar}}" alt="Gambar" height="128">
                     <h6 class="card-title">{{$post->nbarang}}</h6>
                     <h6 class="card-title">Tersedia: {{$post->jbarang}} item</h6>
                     <h6 class="card-title">Rp.{{$post->hbarang}} /hari</h6>
