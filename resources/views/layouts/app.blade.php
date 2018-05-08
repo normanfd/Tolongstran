@@ -57,10 +57,6 @@ html,body{
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
                             <li><a class="nav-link" href="{{ route('post.create') }}">Post Barang</a></li>
-<<<<<<< HEAD
-			    <li><a class="nav-link" href="{{ route('post.create') }}">Post Barang</a></li>
-=======
->>>>>>> 99cdbb054ba5be306179fa5e2144c9cc56ea716f
                             <li><a class="nav-link" href="#">List Pinjaman</a></li>
                             <li><a class="nav-link" href="#">Aset Saya</a></li>
                             <li class="nav-item dropdown">
