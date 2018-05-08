@@ -34,7 +34,7 @@
                 <div class="card-body">
 					<h5 class="card-title">Musik</h5>
 					<p class="card-text">Cari alat musik seperti gitar, biola, dll untuk acara kalian? cari disini.</p>
-					<a href="{{ route ('kostum')}} " class="btn btn-primary">Go somewhere</a>
+					<a href="{{ route ('musik')}} " class="btn btn-primary">Go somewhere</a>
 				</div>
 			</div>
 		</div>
@@ -45,7 +45,7 @@
                 <div class="card-body">
 					<h5 class="card-title">Elektronik</h5>
 					<p class="card-text">Cari alat elektronik seperti sound system, speaker, dll untuk acara kalian? cari disini.</p>
-					<a href="{{ route ('kostum')}} " class="btn btn-primary">Go somewhere</a>
+					<a href="{{ route ('elektronik')}} " class="btn btn-primary">Go somewhere</a>
 				</div>
 			</div>
 		</div>

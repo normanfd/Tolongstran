@@ -18,14 +18,28 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/post/{post}/edit', 'PostController@edit')->name('post.edit');
 Route::patch('/post/{post}/edit', 'PostController@update')->name('post.update');
+
 Route::delete('/post/{post}/delete', 'PostController@destroy')->name('post.destroy');
+
 Route::get('/myaccount', 'myaccountController@myaccount')->name('myaccount');
+
 Route::get('/post/create', 'PostController@create')->name('post.create');
 Route::post('/post/create', 'PostController@store')->name('post.store');
+
 Route::get('/post/furniture', 'PostController@furniture')->name('furniture');
+Route::get('/post/furniture/{post}', 'PostController@showfurniture')->name('post.showfurniture');
+
 Route::get('/post/kostum', 'PostController@kostum')->name('kostum');
+Route::get('/post/kostum/{post}', 'PostController@showkostum')->name('post.showkostum');
+
 Route::get('/post/tenda', 'PostController@tenda')->name('tenda');
+Route::get('/post/tenda/{post}', 'PostController@showtenda')->name('post.showtenda');
+
 Route::get('/post/musik', 'PostController@musik')->name('musik');
+Route::get('/post/musik/{post}', 'PostController@showmusik')->name('post.showmusik');
+ 
 Route::get('/post/elektronik', 'PostController@elektronik')->name('elektronik');
+Route::get('/post/elektronik/{post}', 'PostController@showelektronik')->name('post.showelektronik');

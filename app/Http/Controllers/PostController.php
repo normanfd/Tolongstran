@@ -8,10 +8,7 @@ use App\category;
 
 class PostController extends Controller
 {   
-    public function index(){
-        $posts=post::all();
-        return view('post.index',compact('posts'));
-    }
+
     public function create(){
         $categories = category::all();
         return view('post.create',compact('categories'));
@@ -38,22 +35,33 @@ class PostController extends Controller
     public function furniture(){
         $posts=post::where('category_id', 1)-> get();
         return  view('post.indextoreadfurniture',compact('posts')); }
+
+    public function showfurniture (Post $post) {
+        return view('post.showfurniture', compact('post')); }
     
     public function kostum(){
         $posts=post::where('category_id', 5)-> get();
         return  view('post.indextoreadkostum',compact('posts')); }
+    public function showkostum (Post $post) {
+        return view('post.showkostum', compact('post')); }
 
     public function tenda(){
        $posts=post::where('category_id', 4)-> get();
         return  view('post.indextoreadtenda',compact('posts')); }
+    public function showtenda (Post $post) {
+        return view('post.showtenda', compact('post')); }
 
     public function musik(){
        $posts=post::where('category_id', 6)-> get();
         return  view('post.indextoreadmusik',compact('posts')); }
+    public function showmusik (Post $post) {
+        return view('post.showmusik', compact('post')); }
     
     public function elektronik(){
        $posts=post::where('category_id', 3)-> get();
         return  view('post.indextoreadelektronik',compact('posts')); }
+    public function showelektronik (Post $post) {
+        return view('post.showelektronik', compact('post')); }
     
 }
 

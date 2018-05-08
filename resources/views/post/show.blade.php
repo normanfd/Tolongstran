@@ -13,7 +13,7 @@
                     <h3 class="card-title">{{$post->nbarang}}</h3>
                     <h5 class="card-title">Tersedia: {{$post->jbarang}} item</h5>
                     <h5 class="card-title">Rp.{{$post->hbarang}} /hari</h5>
-                    <a href="{{ route('post.showkostum', $post) }}" class="btn btn-primary" >Selengkapnya</a>
+                    <a href="#" class="btn btn-primary" >Selengkapnya</a>
                     
                     
                 </div>
