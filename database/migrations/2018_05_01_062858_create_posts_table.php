@@ -16,7 +16,7 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('category_id')->unsigned();
-            $table->integer('user_id')->unsigned();
+            // $table->integer('user_id')->unsigned();
             $table->string('slug');/**slug */
             $table->string('nbarang'); /**kolom nama barang */
             $table->text('deskripsi');
@@ -29,9 +29,9 @@ class CreatePostsTable extends Migration
             ->references('id')->on('categories')
             ->onDelete('cascade');
 
-            $table->foreign('user_id')
-            ->references('id')->on('users')
-            ->onDelete('cascade');
+            // $table->foreign('user_id')
+            // ->references('id')->on('users')
+            // ->onDelete('cascade');
         });
     }
 
