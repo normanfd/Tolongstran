@@ -36,7 +36,7 @@ html,body{
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="#">
                     <img src="img/logo.png" height="60px">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +57,10 @@ html,body{
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
                             <li><a class="nav-link" href="{{ route('post.create') }}">Post Barang</a></li>
+<<<<<<< HEAD
 			    <li><a class="nav-link" href="{{ route('post.create') }}">Post Barang</a></li>
+=======
+>>>>>>> 99cdbb054ba5be306179fa5e2144c9cc56ea716f
                             <li><a class="nav-link" href="#">List Pinjaman</a></li>
                             <li><a class="nav-link" href="#">Aset Saya</a></li>
                             <li class="nav-item dropdown">

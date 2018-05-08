@@ -18,7 +18,14 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        
+        $this->validate(request(),[
+            'nbarang'=>'required',
+            'jbarang'=>'required|numeric',
+            'hbarang'=>'required|numeric',
+            'deskripsi'=>'required',
+            'gambar'=>'required|image',
+        ]);
+            
         Post::create([
             'nbarang'=>request('nbarang'),
             'jbarang'=>request('jbarang'),
@@ -33,6 +40,7 @@ class PostController extends Controller
         return redirect('/home');
     }
     public function furniture(){
+        $posts=post::all();
         $posts=post::where('category_id', 1)-> get();
         return  view('post.indextoreadfurniture',compact('posts')); }
 
@@ -40,18 +48,21 @@ class PostController extends Controller
         return view('post.showfurniture', compact('post')); }
     
     public function kostum(){
+        $posts=post::all();
         $posts=post::where('category_id', 5)-> get();
         return  view('post.indextoreadkostum',compact('posts')); }
     public function showkostum (Post $post) {
         return view('post.showkostum', compact('post')); }
 
     public function tenda(){
+        $posts=post::all();
        $posts=post::where('category_id', 4)-> get();
         return  view('post.indextoreadtenda',compact('posts')); }
     public function showtenda (Post $post) {
         return view('post.showtenda', compact('post')); }
 
     public function musik(){
+        $posts=post::all();
        $posts=post::where('category_id', 6)-> get();
         return  view('post.indextoreadmusik',compact('posts')); }
     public function showmusik (Post $post) {
@@ -64,5 +75,3 @@ class PostController extends Controller
         return view('post.showelektronik', compact('post')); }
     
 }
-
-
