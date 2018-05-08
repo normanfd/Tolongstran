@@ -30,28 +30,33 @@
 
 		<div class="col-sm-3">
 			<div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap">
+                <img class="card-img-top" src="img/musik.png" alt="Card image cap">
                 <div class="card-body">
 					<h5 class="card-title">Musik</h5>
-					<p class="card-text">Cari alat musik seperti gitar, biola, dll untuk acara kalian? cari disini.</p>
-					<a href="{{ route ('kostum')}} " class="btn btn-primary">Go somewhere</a>
+					<p class="card-text">Cari alat musik seperti gitar, biola atau alat musik lainnya untuk acara kalian? cari disini.</p>
+					<a href="{{ route ('musik')}} " class="btn btn-primary">Go somewhere</a>
 				</div>
 			</div>
 		</div>
 
 		<div class="col-sm-3">
 			<div class="card">
-                <img class="card-img-top" src="#" alt="Card image cap">
+                <img class="card-img-top" src="img/elektronik.png" alt="Card image cap">
                 <div class="card-body">
 					<h5 class="card-title">Elektronik</h5>
 					<p class="card-text">Cari alat elektronik seperti sound system, speaker, dll untuk acara kalian? cari disini.</p>
-					<a href="{{ route ('kostum')}} " class="btn btn-primary">Go somewhere</a>
+					<a href="{{ route ('elektronik')}} " class="btn btn-primary">Go somewhere</a>
 				</div>
 			</div>
 		</div>
 
+<br>
+		
 
-		<div class="col-sm-3">
+    </div>
+    <br></br>
+    <div class="row">
+	<div class="col-sm-3">
 			<div class="card">
                 <img class="card-img-top" src="img/tenda.png" alt="Card image cap">
                 <div class="card-body">
@@ -63,9 +68,6 @@
 		</div>
 
     </div>
-    <br></br>
-    <div class="row">
-		
 		
 		
     </div>
