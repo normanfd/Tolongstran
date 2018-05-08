@@ -15,6 +15,7 @@
                     <h6 class="card-title">Deskripsi Produk :</h6>
                     <p>{{$post->deskripsi}}</p>
                     
+                    
                 </div>
 			</div>
         </div>

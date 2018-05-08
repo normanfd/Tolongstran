@@ -14,8 +14,6 @@
                     <h5 class="card-title">Tersedia: {{$post->jbarang}} item</h5>
                     <h5 class="card-title">Rp.{{$post->hbarang}} /hari</h5>
                     <a href="{{ route('post.showkostum', $post) }}" class="btn btn-primary" >Selengkapnya</a>
-                    
-                    
                 </div>
 			</div>
         </div>
