@@ -1,23 +1,31 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-	<div class="row">
-    @foreach($posts as $post)
-    
-        <div class="col-sm-3">
+    <div class="container">
+       <div class="row">
+           <div class="col-md-8 col-md-offset-2">
+			   <div class="panel panel-default">
+					<div class="card" style="width:1100px;height:500px;">
+						<div class="card-body">
+							<div class="row">
+                                <div class="col-3">
+                                    <img src="../../storage/{{$post->gambar}}" alt="Gambar" height="300">
+                                    <h2 class="card-title text-center"><strong>{{$post->nbarang}}</strong></h2>
+                                    <h6 class="card-title text-center">Tersedia: {{$post->jbarang}} item</h6>
+                                    <h5 class="card-title text-center text-warning"><strong>Rp.{{$post->hbarang}} /hari</strong></h5>
+                                    <div class="text-center"><a href="#" class="btn btn-primary" ><strong>Sewa Sekarang</strong></a></div>
+                                </div>
+                                <div class="col">
+                                    <h6 class="card-title"><strong>Deskripsi Produk :</strong></h6>
+                                    <p>{{$post->deskripsi}}</p>
+                                </div>
+                            </row>
+						</div>
+					</div>
+				</div>
+               
+            </div>
         
-			<div class="card text-center" style="width:250px;height:350px;">
-                <div class="card-body">
-                    <img src="../storage/{{$post->gambar}}" alt="Gambar" height="128">
-                    <h3 class="card-title">{{$post->nbarang}}</h3>
-                    <h5 class="card-title">Tersedia: {{$post->jbarang}} item</h5>
-                    <h5 class="card-title">Rp.{{$post->hbarang}} /hari</h5>
-                    <a href="#" class="btn btn-primary" >Selengkapnya</a>
-                </div>
-			</div>
         </div>
-        @endforeach
     </div>
-</div>
 @endsection
