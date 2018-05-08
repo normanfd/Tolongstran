@@ -21,7 +21,14 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        
+        $this->validate(request(),[
+            'nbarang'=>'required',
+            'jbarang'=>'required|numeric',
+            'hbarang'=>'required|numeric',
+            'deskripsi'=>'required',
+            'gambar'=>'required|image',
+        ]);
+            
         Post::create([
             'nbarang'=>request('nbarang'),
             'jbarang'=>request('jbarang'),
@@ -56,5 +63,3 @@ class PostController extends Controller
         return  view('post.indextoreadelektronik',compact('posts')); }
     
 }
-
-

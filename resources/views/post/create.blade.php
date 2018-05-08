@@ -3,9 +3,9 @@
 <div class="container">
     <form class="" action="{{ route('post.store') }}" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
-        <div class="form-group">
+        <div class="form-group has-feedback{{ $errors->has('nbarang') ? ' is-invalid' : '' }}">
             <label for="">Nama Barang</label>
-            <input type="text" class="form-control{{ $errors->has('nbarang') ? ' is-invalid' : '' }}" name="nbarang" value="{{ old('nbarang') }}" required autofocus>
+            <input type="text" class="form-control" name="nbarang" value="{{ old('nbarang') }}" required autofocus>
             <div class="col-md-6">
                 @if ($errors->has('nbarang'))
                     <span class="invalid-feedback">
@@ -22,9 +22,9 @@
                 @endforeach
             </select>
         </div>
-        <div class="form-group">
+        <div class="form-group has-feedback{{ $errors->has('deskripsi') ? ' is-invalid' : '' }}">
             <label for="">Deskripsi Barang</label>
-            <textarea name="deskripsi" rows="5" class="form-control{{ $errors->has('deskripsi') ? ' is-invalid' : '' }}"  value="{{ old('nbarang') }}" required autofocus></textarea>
+            <textarea name="deskripsi" rows="5" class="form-control" required autofocus>{{ old('deskripsi') }}</textarea>
             <div class="col-md-6">
                 @if ($errors->has('deskripsi'))
                     <span class="invalid-feedback">
@@ -35,7 +35,7 @@
         </div>
         <div class="form-group">
             <label for="">Harga Barang</label>
-            <input type="integer" name="hbarang" class="form-control{{ $errors->has('hbarang') ? ' is-invalid' : '' }}"  value="{{ old('hbarang') }}" required autofocus>
+            <input type="number" name="hbarang" class="form-control has-feedback{{ $errors->has('hbarang') ? ' is-invalid' : '' }}"  value="{{ old('hbarang') }}" required autofocus>
             <div class="col-md-6">
                 @if ($errors->has('hbarang'))
                     <span class="invalid-feedback">
@@ -46,7 +46,7 @@
         </div>
         <div class="form-group">
             <label for="">Jumlah Barang</label>
-            <input type="integer" name="jbarang" class="form-control{{ $errors->has('jbarang') ? ' is-invalid' : '' }}"  value="{{ old('jbarang') }}" required autofocus>
+            <input type="number" name="jbarang" class="form-control{{ $errors->has('jbarang') ? ' is-invalid' : '' }}"  value="{{ old('jbarang') }}" required autofocus>
             <div class="col-md-6">
                 @if ($errors->has('jbarang'))
                     <span class="invalid-feedback">
@@ -55,7 +55,7 @@
                 @endif
             </div>
         </div>
-        
+        <!-- autofokusnya masih bermasalah -->
         <div class="form-group">
             <div class="input-field">
                 <input type="file" name="gambar" class="validate{{ $errors->has('gambar') ? ' is-invalid' : '' }}"  value="{{ old('gambar') }}" required autofocus >
