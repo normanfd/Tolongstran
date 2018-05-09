@@ -5,13 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\post;
 use App\category;
+use App\User;
+use Auth;
 
 class PostController extends Controller
 {   
 
     public function create(){
         $categories = category::all();
-        return view('post.create',compact('categories'));
+        $users = User::all();
+        return view('post.create',compact('categories','users'));
     }
     public function show (Post $post) {
         return view('post.show', compact('post')); }
@@ -35,7 +38,7 @@ class PostController extends Controller
             'category_id' =>request('category_id'),
             $gambar=$request->file('gambar')->store('gambars'),
             'gambar'=>$gambar,
-            // 'user_id'=>request('user_id')
+            'user_id'=>request('user_id')
         ]);
             
         return redirect('/home');

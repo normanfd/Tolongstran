@@ -14,6 +14,18 @@
                 @endif
             </div>
         </div>
+
+        <div class="form-group">
+            <label for="">Username</label>
+            <select name="user_id" id="" class="form-control">
+                @foreach ($users as $user)
+                {@if($user->id == Auth::User()->id)
+                  <option value="{{ $user->id}}">{{$user->name}}</option>
+                @endif}
+                @endforeach
+            </select>
+        </div>
+
         <div class="form-group">
             <label for="">Category</label>
             <select name="category_id" id="" class="form-control">
