@@ -8,6 +8,18 @@
         <div class="card-body">
         <form class="" action="{{ route('post.store') }}" method="post" enctype="multipart/form-data">
                 {{csrf_field()}}
+                
+            <div class="form-group">
+                <label for="">Username</label>
+                <select name="user_id" id="" class="form-control">
+                    @foreach ($users as $user)
+                    {@if($user->id == Auth::User()->id)
+                  <option value="{{ $user->id}}">{{$user->name}}</option>
+                    @endif}
+                    @endforeach
+                </select>
+            </div>
+                
                 <div class="form-group has-feedback{{ $errors->has('nbarang') ? ' is-invalid' : '' }}">
                     <label for="">Nama Barang</label>
                     <input type="text" class="form-control" name="nbarang" value="{{ old('nbarang') }}" required autofocus>
