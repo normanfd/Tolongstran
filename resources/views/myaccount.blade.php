@@ -18,7 +18,6 @@
             <label for="pwd">Nama Lengkap:</label>
             <input type="text" class="form-control" id="nama"  value="{{AUth::user()->name}}" readonly style="background-color:#efefef">
           </div>
-        
           <div class="form-group">
             <label for="pwd">Alamat:</label>
             <input type="text" class="form-control" id="alamat" value="">
