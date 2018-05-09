@@ -70,7 +70,7 @@ html,body{
                                         {{ __('Beranda') }}
                                     </a>
                                 <a class="dropdown-item" href="{{ route('myaccount') }}">
-                                        {{ __('My Account') }}
+                                        {{ __('Profil') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

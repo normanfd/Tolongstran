@@ -34,7 +34,8 @@ class PostController extends Controller
             'slug'=>str_slug(request('nbarang')),
             'category_id' =>request('category_id'),
             $gambar=$request->file('gambar')->store('gambars'),
-            'gambar'=>$gambar
+            'gambar'=>$gambar,
+            // 'user_id'=>request('user_id')
         ]);
             
         return redirect('/home');
