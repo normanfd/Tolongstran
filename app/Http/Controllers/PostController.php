@@ -53,27 +53,27 @@ class PostController extends Controller
     
     public function kostum(){
         $posts=post::all();
-        $posts=post::where('category_id', 5)-> get();
+        $posts=post::where('category_id', 2)-> get();
         return  view('post.indextoreadkostum',compact('posts')); }
     public function showkostum (Post $post) {
         return view('post.showkostum', compact('post')); }
 
     public function tenda(){
         $posts=post::all();
-       $posts=post::where('category_id', 4)-> get();
+       $posts=post::where('category_id', 5)-> get();
         return  view('post.indextoreadtenda',compact('posts')); }
     public function showtenda (Post $post) {
         return view('post.showtenda', compact('post')); }
 
     public function musik(){
         $posts=post::all();
-       $posts=post::where('category_id', 6)-> get();
+       $posts=post::where('category_id', 3)-> get();
         return  view('post.indextoreadmusik',compact('posts')); }
     public function showmusik (Post $post) {
         return view('post.showmusik', compact('post')); }
     
     public function elektronik(){
-       $posts=post::where('category_id', 3)-> get();
+       $posts=post::where('category_id', 4)-> get();
         return  view('post.indextoreadelektronik',compact('posts')); }
     public function showelektronik (Post $post) {
         return view('post.showelektronik', compact('post')); }
