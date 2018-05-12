@@ -43,6 +43,47 @@ class PostController extends Controller
             
         return redirect('/home');
     }
+
+    public function edit($id)
+    {
+        $categories = category::all();
+        $users = User::all();
+        $post = Post::find($id);
+        return view('post.edit', compact('post','categories','users'));
+    }
+
+    public function update($id,Request $request)
+    {   
+        $this->validate(request(),[
+            'nbarang'=>'required',
+            'jbarang'=>'required|numeric',
+            'hbarang'=>'required|numeric',
+            'deskripsi'=>'required',
+            'gambar'=>'required|image',
+        ]);
+
+        $post = Post::find($id);
+        $categories = category::all();
+        $users = User::all();
+        $post -> update([
+            'nbarang'=>request('nbarang'),
+            'jbarang'=>request('jbarang'),
+            'hbarang'=>request('hbarang'),
+            'deskripsi'=>request('deskripsi'),
+            'slug'=>str_slug(request('nbarang')),
+            'category_id' =>request('category_id'),
+            $gambar=$request->file('gambar')->store('gambars'),
+            'gambar'=>$gambar,
+            'user_id'=>request('user_id')
+        ]);
+        return redirect('home');
+    }
+
+    public function destroy(Post $post){
+        $post->delete();
+        return redirect('home');
+    }
+
     public function furniture(){
         $posts=post::all();
         $posts=post::where('category_id', 1)-> get();
