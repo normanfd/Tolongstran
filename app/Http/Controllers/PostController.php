@@ -41,7 +41,7 @@ class PostController extends Controller
             'user_id'=>request('user_id')
         ]);
             
-        return redirect('/home');
+        return redirect('/home')->with('success','Data Berhasil Ditambahkan');
     }
 
     public function edit($id)
@@ -76,12 +76,12 @@ class PostController extends Controller
             'gambar'=>$gambar,
             'user_id'=>request('user_id')
         ]);
-        return redirect('home');
+        return redirect('home')->with('success','Post Berhasil Di Edit');
     }
 
     public function destroy(Post $post){
         $post->delete();
-        return redirect('home');
+        return redirect('home')->with('danger','Post Berhasil Di Delete');
     }
 
     public function furniture(){

@@ -104,6 +104,7 @@ html,body{
         </nav>
 
         <main class="py-4">
+            @include('layouts.partials._alerts')
             @yield('content')
         </main>
     
