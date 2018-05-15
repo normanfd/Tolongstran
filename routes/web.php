@@ -19,8 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/post/{post}/edit', 'PostController@edit')->name('post.edit');
-Route::patch('/post/{post}/edit', 'PostController@update')->name('post.update');
+Route::get('/post/{id}/edit', 'PostController@edit')->name('post.edit');
+Route::patch('/post/{id}/edit', 'PostController@update')->name('post.update');
 
 Route::delete('/post/{post}/delete', 'PostController@destroy')->name('post.destroy');
 
@@ -43,3 +43,7 @@ Route::get('/post/musik/{post}', 'PostController@showmusik')->name('post.showmus
  
 Route::get('/post/elektronik', 'PostController@elektronik')->name('elektronik');
 Route::get('/post/elektronik/{post}', 'PostController@showelektronik')->name('post.showelektronik');
+
+Route::get('/post/transaction', 'PostController@transaction')->name('post.transaction');
+
+Route::get('/asetku', 'AsetController@aset')->name('aset');
