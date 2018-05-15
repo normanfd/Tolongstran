@@ -45,3 +45,4 @@ Route::get('/post/elektronik', 'PostController@elektronik')->name('elektronik');
 Route::get('/post/elektronik/{post}', 'PostController@showelektronik')->name('post.showelektronik');
 
 Route::get('/asetku', 'AsetController@aset')->name('aset');
+
