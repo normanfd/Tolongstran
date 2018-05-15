@@ -24,7 +24,7 @@
           </div>
           
         <div class="form-group">
-            <label for="pwd">Nomor reekening:</label>
+            <label for="pwd">Nomor rekening:</label>
             <input type="text" class="form-control" id="rek" value="">
           </div>
         
