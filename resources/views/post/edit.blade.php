@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.img')
 @section('content')
 <div class="container">
     <div class="card">
@@ -79,7 +79,8 @@
                     </div>
                 </div>
                 <div class="form-group">
-                <input type='submit' class='btn btn-primary' value="save">
+                <button type="submit"  class="btn btn-outline-success" value="save">Submit</button>
+                
                 </div>
             </form>
         </div>

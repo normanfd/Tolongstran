@@ -44,6 +44,6 @@ Route::get('/post/musik/{post}', 'PostController@showmusik')->name('post.showmus
 Route::get('/post/elektronik', 'PostController@elektronik')->name('elektronik');
 Route::get('/post/elektronik/{post}', 'PostController@showelektronik')->name('post.showelektronik');
 
-Route::get('/post/transaction', 'PostController@transaction')->name('post.transaction');
 
+Route::get('/post/transaction', 'PostController@transaction')->name('post.transaction');
 Route::get('/asetku', 'AsetController@aset')->name('aset');

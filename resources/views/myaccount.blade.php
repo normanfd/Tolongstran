@@ -1,41 +1,69 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+body{margin-top:20px;}	
+</style>
 
-<div class="container">
-  <div class="card">
-    <div class="card-header">
-      Profil
-    </div>
-    <div class="card-body">
-      <form action="" method="post" > 
-        <div class="form-group">
-            <label for="email">Email address:</label>
-            <input type="email" class="form-control" id="email"  value="{{AUth::user()->email}}" readonly style="background-color:#efefef">
+
+<div class="container bootstrap snippet">
+    
+      <hr>
+	<div class="row">
+      <!-- left column -->
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <h6>Upload a different photo...</h6>
+          
+          <input type="file" name="gambar" class="form-control">
         </div>
-          
-        <div class="form-group">
-            <label for="pwd">Nama Lengkap:</label>
-            <input type="text" class="form-control" id="nama"  value="{{AUth::user()->name}}" readonly style="background-color:#efefef">
-          </div>
-          <div class="form-group">
-            <label for="pwd">Alamat:</label>
-            <input type="text" class="form-control" id="alamat" value="">
-          </div>
-          
-        <div class="form-group">
-            <label for="pwd">Nomor reekening:</label>
-            <input type="text" class="form-control" id="rek" value="">
-          </div>
+      </div>
+      
+      <!-- edit form column -->
+      <div class="col-md-9 personal-info">
+        <div class="alert alert-info alert-dismissable">
+          <a class="panel-close close" data-dismiss="alert">×</a> 
+          <i class="fa fa-coffee"></i>
+          Data dibawah <strong>wajib</strong> diisi.
+        </div>
+        <h3>Profil</h3>
         
+        <form class="form-horizontal" role="form" method="POST" action="">
           <div class="form-group">
-            <label for="pwd">Nomor telepon:</label>
-            <input type="text" class="form-control" id="hp" value="">
-            <br>
-        </div>
-          <button type="submit" class="btn btn-default" value="Update">Submit</button>
-      </form>  
-    </div>
+            <label class="col-lg-3 control-label">Nama:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="name" type="text" value="{{AUth::user()->name}}" readonly style="background-color:#efefef">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Email:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="email" type="text" value="{{AUth::user()->email}}" readonly style="background-color:#efefef">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Alamat:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="alamat" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">No.HP:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="hp" type="text" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-3 control-label">No.Rekening:</label>
+            <div class="col-lg-8">
+              <input class="form-control" name="rek" type="text" value="">
+            </div>
+          </div>
+          <button type="submit"  class="btn btn-success" value="save">Submit</button>
+        </form>
+      </div>
   </div>
 </div>
+<hr>
 @endsection
