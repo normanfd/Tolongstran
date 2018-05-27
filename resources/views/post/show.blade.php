@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.img')
 
 @section('content')
     <div class="container">
@@ -13,7 +13,8 @@
                                     <h2 class="card-title text-center"><strong>{{$post->nbarang}}</strong></h2>
                                     <h6 class="card-title text-center">Tersedia: {{$post->jbarang}} item</h6>
                                     <h5 class="card-title text-center text-warning"><strong>Rp.{{$post->hbarang}} /hari</strong></h5>
-                                    <div class="text-center"><a href="#" class="btn btn-primary" ><strong>Sewa Sekarang</strong></a></div>
+                                    <div class="text-center"><button type="submit" class="btn btn-outline-success" href="#">Submit</button>
+                </div></div>
                                 </div>
                                 <div class="col">
                                     <h6 class="card-title"><strong>Deskripsi Produk :</strong></h6>

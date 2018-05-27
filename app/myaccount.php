@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class myaccount extends Authenticatable
 {
     use Notifiable;
 
@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'username', 'email', 'password',
+        'firstname','lastname','username', 'email', 'alamat', 'country', 'phoneNumber', 'rek',
     ];
 
     /**
@@ -23,12 +23,6 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
 
-    public function post()
-    {
-        return $this->hasMany(Post::class);
-    }
+  
 }

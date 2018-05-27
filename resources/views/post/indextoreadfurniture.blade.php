@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.img')
 
 @section('content')
 <div class="container">
@@ -9,6 +9,7 @@
     <div class="card-body">
     <div class="row">
         @foreach($posts as $post)
+            @if($id != $post->user_id)
             <div class="col-sm-3">
                 <div class="card text-center" style="width:250px;height:350px;">
                     <div class="card-body">
@@ -21,6 +22,7 @@
                     </div>
                 </div>
             </div>
+            @endif
             @endforeach
         </div>
     </div>

@@ -60,7 +60,7 @@ class PostController extends Controller
             'hbarang'=>'required|numeric',
             'deskripsi'=>'required',
             'gambar'=>'required|image',
-        ]);
+        ]);      
 
         $post = Post::find($id);
         $categories = category::all();
@@ -85,14 +85,16 @@ class PostController extends Controller
     }
 
     public function furniture(){
+        $id = Auth::user()->id;
         $posts=post::all();
         $posts=post::where('category_id', 1)-> get();
-        return  view('post.indextoreadfurniture',compact('posts')); }
+        return  view('post.indextoreadfurniture',compact('posts','id')); }
 
     public function showfurniture (Post $post) {
-        return view('post.showfurniture', compact('post')); }
+        return view('post.showfurniture', compact('post','id')); }
     
     public function kostum(){
+        $id = Auth::user()->id;
         $posts=post::all();
         $posts=post::where('category_id', 2)-> get();
         return  view('post.indextoreadkostum',compact('posts')); }
@@ -100,6 +102,7 @@ class PostController extends Controller
         return view('post.showkostum', compact('post')); }
 
     public function tenda(){
+        $id = Auth::user()->id;
         $posts=post::all();
        $posts=post::where('category_id', 5)-> get();
         return  view('post.indextoreadtenda',compact('posts')); }
@@ -107,6 +110,7 @@ class PostController extends Controller
         return view('post.showtenda', compact('post')); }
 
     public function musik(){
+        $id = Auth::user()->id;
         $posts=post::all();
        $posts=post::where('category_id', 3)-> get();
         return  view('post.indextoreadmusik',compact('posts')); }
@@ -114,6 +118,7 @@ class PostController extends Controller
         return view('post.showmusik', compact('post')); }
     
     public function elektronik(){
+        $id = Auth::user()->id;
        $posts=post::where('category_id', 4)-> get();
         return  view('post.indextoreadelektronik',compact('posts')); }
     public function showelektronik (Post $post) {

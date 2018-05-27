@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.img')
 @section('content')
 <div class="container">
     <div class="card">
@@ -8,7 +8,7 @@
         <div class="card-body">
         <form class="" action="{{ route('post.update',$post) }}" method="post" enctype="multipart/form-data">
                 {{csrf_field()}}
-            {{ method_field('PATCH') }}    
+                 {{ method_field('PATCH') }}    
             <div class="form-group">
                 <label for="">Username</label>
                 <select name="user_id" id="" class="form-control">
@@ -79,7 +79,8 @@
                     </div>
                 </div>
                 <div class="form-group">
-                <input type='submit' class='btn btn-primary' value="save">
+                <button type="submit"  class="btn btn-outline-success" value="save">Submit</button>
+                
                 </div>
             </form>
         </div>

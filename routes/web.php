@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('register',function () {
+    return view('auth.register');
+});
 
 Auth::routes();
 
@@ -24,7 +27,10 @@ Route::patch('/post/{id}/edit', 'PostController@update')->name('post.update');
 
 Route::delete('/post/{post}/delete', 'PostController@destroy')->name('post.destroy');
 
-Route::get('/myaccount', 'myaccountController@myaccount')->name('myaccount');
+Route::get('/user/myaccount', 'myaccountController@myaccount')->name('myaccount');
+Route::post('/user/myaccount', 'myaccountController@storemyaccount')->name('user.storemyaccount');
+Route::get('/user/myaccount/edit', 'myaccountController@editmyaccount')->name('user.editmyaccount');
+Route::post('/user/myaccount/edit', 'myaccountController@updatemyaccount')->name('user.updatemyaccount');
 
 Route::get('/post/create', 'PostController@create')->name('post.create');
 Route::post('/post/create', 'PostController@store')->name('post.store');
@@ -45,3 +51,4 @@ Route::get('/post/elektronik', 'PostController@elektronik')->name('elektronik');
 Route::get('/post/elektronik/{post}', 'PostController@showelektronik')->name('post.showelektronik');
 
 Route::get('/asetku', 'AsetController@aset')->name('aset');
+

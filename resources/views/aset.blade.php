@@ -11,11 +11,11 @@
                     <h3 class="card-title"><strong>{{$post->nbarang}}</strong></h3>
                     <h5 class="card-title">Tersedia: {{$post->jbarang}} item</h5>
                     <h5 class="card-title text-warning"><strong>Rp.{{$post->hbarang}} /hari</strong></h5>
-                    <a href="{{ route('post.edit',$post) }}" class="btn btn-info" >Edit</a>
+                    <a href="{{ route('post.edit',$post) }}" class="btn btn-outline-info" >Edit</a>
                     <form class="" action="{{ route('post.destroy',$post) }}" method="post">
                     {{csrf_field()}}
                     {{ method_field('DELETE') }} 
-                    <button type="submit" class="btn btn-danger">Delete</button>   
+                    <button type="submit" class="btn btn-outline-danger">Delete</button>   
                     </form>
                      
                 </div>
