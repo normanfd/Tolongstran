@@ -31,6 +31,7 @@
 <body>
 <style>
 html,body{
+
 	background-color: #d9ffb3;
     font-family: 'Arial';
 }
@@ -69,7 +70,6 @@ html,body{
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
                             <li><a class="nav-link" href="{{ route('post.create') }}">Post Barang</a></li>
-                            <li><a class="nav-link" href="#">List Pinjaman</a></li>
                             <li><a class="nav-link" href="{{ route('aset') }}">Aset Saya</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -104,6 +104,7 @@ html,body{
         </nav>
 
         <main class="py-4">
+            @include('layouts.partials._alerts')
             @yield('content')
         </main>
     

@@ -24,7 +24,7 @@ class CreatePostsTable extends Migration
             $table->integer('hbarang');/**harga barang */
             $table->string('gambar')->nullable()->default(null);
             $table->timestamps();
-            
+            $table->integer('status')->nullable()->default('0');
             $table->foreign('category_id')
             ->references('id')->on('categories')
             ->onDelete('cascade');
