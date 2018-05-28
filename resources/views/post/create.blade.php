@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="">Harga Barang</label>
+                    <label for="">Harga Sewa Barang</label>
                     <input type="number" name="hbarang" class="form-control has-feedback{{ $errors->has('hbarang') ? ' is-invalid' : '' }}"  value="{{ old('hbarang') }}" required autofocus>
                     <div class="col-md-6">
                         @if ($errors->has('hbarang'))
