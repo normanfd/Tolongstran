@@ -39,14 +39,14 @@ body{margin-top:20px;}
           </div>
 
           <div class="form-group">
-            <label class="col-lg-3 control-label">FName</label>
+            <label class="col-lg-3 control-label">First Name</label>
             <div class="col-lg-8">
               <input class="form-control" name="firstname" type="text" value="{{AUth::user()->firstname}}" >
             </div>
           </div>
 
           <div class="form-group">
-            <label class="col-lg-3 control-label">LName</label>
+            <label class="col-lg-3 control-label">Last Name</label>
             <div class="col-lg-8">
               <input class="form-control" name="lastname" type="text" value="{{AUth::user()->lastname}}" >
             </div>

@@ -97,32 +97,32 @@ class PostController extends Controller
         $id = Auth::user()->id;
         $posts=post::all();
         $posts=post::where('category_id', 2)-> get();
-        return  view('post.indextoreadkostum',compact('posts')); }
+        return  view('post.indextoreadkostum',compact('posts','id')); }
     public function showkostum (Post $post) {
-        return view('post.showkostum', compact('post')); }
+        return view('post.showkostum', compact('post','id')); }
 
     public function tenda(){
         $id = Auth::user()->id;
         $posts=post::all();
        $posts=post::where('category_id', 5)-> get();
-        return  view('post.indextoreadtenda',compact('posts')); }
+        return  view('post.indextoreadtenda',compact('posts','id')); }
     public function showtenda (Post $post) {
-        return view('post.showtenda', compact('post')); }
+        return view('post.showtenda', compact('post','id')); }
 
     public function musik(){
         $id = Auth::user()->id;
         $posts=post::all();
        $posts=post::where('category_id', 3)-> get();
-        return  view('post.indextoreadmusik',compact('posts')); }
+        return  view('post.indextoreadmusik',compact('posts','id')); }
     public function showmusik (Post $post) {
-        return view('post.showmusik', compact('post')); }
+        return view('post.showmusik', compact('post','id')); }
     
     public function elektronik(){
         $id = Auth::user()->id;
        $posts=post::where('category_id', 4)-> get();
-        return  view('post.indextoreadelektronik',compact('posts')); }
+        return  view('post.indextoreadelektronik',compact('posts','id')); }
     public function showelektronik (Post $post) {
-        return view('post.showelektronik', compact('post')); }
+        return view('post.showelektronik', compact('post','id')); }
     public function transaction () {
         return view('post.transaction'); }
 }
