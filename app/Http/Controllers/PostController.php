@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\post;
+use App\transaksi;
 use App\category;
 use App\User;
 use Auth;
@@ -123,6 +124,11 @@ class PostController extends Controller
         return  view('post.indextoreadelektronik',compact('posts','id')); }
     public function showelektronik (Post $post) {
         return view('post.showelektronik', compact('post','id')); }
-    public function transaction () {
-        return view('post.transaction'); }
+    
+    public function transaction (Post $post) {
+        $users = User::where('id',$post->user_id)->get();
+        
+        return view('post.transaction',compact('post','id','users')); }
+    
+        
 }
