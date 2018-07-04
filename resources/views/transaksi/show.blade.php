@@ -3,6 +3,8 @@
 @section('content')
 <div class="container">
 	<div class="row">
+    <form class="" action="{{ route('transaksi.update') }}" method="post" enctype="multipart/form-data">
+            {{ csrf_field() }}
     @foreach($transaksis as $transaksi)
         <div class="col-sm-3"> @if($transaksi->id_pemilik == Auth::user()->id)
 			<div class="card text-center" style="width:250px;height:350px;">
@@ -36,7 +38,7 @@
                         <option value="{{ "1" }}">{{ "Reject" }}</option>
                         <option value="{{ "3" }}">{{ "Accept" }}</option>
                     </select>
-                    
+                    <button type="submit"  class="btn btn-outline-success" value="save">Submit</button>
                    
                 @endif
                 

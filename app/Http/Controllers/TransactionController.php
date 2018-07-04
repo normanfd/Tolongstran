@@ -39,5 +39,12 @@ class TransactionController extends Controller
             ]);
                 
             return redirect('/home')->with('success','Request Berhasil Ditambahkan');
-        }    
+        }
+        
+    public function update(){
+       $posts = Transaksi::where('status','2')->first();
+       $posts->status = 3;
+       $posts->save();
+       return redirect('/home')->with('success','Request Accept');
+    }
 }
