@@ -45,6 +45,12 @@ class TransactionController extends Controller
        $posts = Transaksi::where('status','2')->first();
        $posts->status = 3;
        $posts->save();
-       return redirect('/home')->with('success','Request Accept');
+       return redirect('/home')->with('success','Request Telah di Accept');
     }
+
+    public function destroy(){
+        $posts = Transaksi::where('status','2')->first();
+        $posts->delete();
+        return redirect('/home')->with('success','Request Telah di Reject');
+     }
 }

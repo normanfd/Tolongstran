@@ -55,5 +55,7 @@ Route::get('/post/transaction/{post}', 'TransactionController@create')->name('tr
 Route::post('/post/transaction/', 'TransactionController@store')->name('transaksi.store');
 Route::get('/list','TransactionController@show')->name('transaksi.show');
 Route::post('/list','TransactionController@update')->name('transaksi.update');
+Route::delete('/list', 'TransactionController@destroy')->name('transaksi.destroy');
+
 
 Route::get('/asetku', 'AsetController@aset')->name('aset');
