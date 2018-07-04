@@ -51,5 +51,8 @@ Route::get('/post/elektronik', 'PostController@elektronik')->name('elektronik');
 Route::get('/post/elektronik/{post}', 'PostController@showelektronik')->name('post.showelektronik');
 
 
-Route::get('/post/transaction/{post}', 'PostController@transaction')->name('post.transaction');
+Route::get('/post/transaction/{post}', 'TransactionController@create')->name('transaksi.create');
+Route::post('/post/transaction/', 'TransactionController@store')->name('transaksi.store');
+Route::get('/list','TransactionController@show')->name('transaksi.show');
+
 Route::get('/asetku', 'AsetController@aset')->name('aset');

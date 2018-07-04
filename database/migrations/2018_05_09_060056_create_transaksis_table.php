@@ -19,6 +19,7 @@ class CreateTransaksisTable extends Migration
             $table->integer('id_pemilik')->unsigned();
             $table->integer('id_peminjam')->unsigned();
             $table->integer('id_barang')->unsigned();
+            $table->integer('status')->unsigned()->nullable();
             $table->integer('jbarang');
 
             $table->foreign('id_pemilik')

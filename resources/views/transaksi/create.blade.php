@@ -7,7 +7,8 @@
                 Transaksi
             </div>
             <div class="card-body">
-       
+            <form class="" action="{{ route('transaksi.store') }}" method="post" enctype="multipart/form-data">
+            {{ csrf_field() }}
             <div class="form-group">
                 <label for="">Pemilik Barang</label>
                 <select name="id_pemilik" id="" class="form-control" readonly=read-only>
@@ -26,7 +27,7 @@
             
             <div class="form-group">
                 <label for="">Nama Barang</label>
-                <select name="id_peminjam" id="" class="form-control" readonly=read-only>
+                <select name="id_barang" id="" class="form-control" readonly=read-only>
                 <option value="{{ $post->id }}">{{$post->nbarang}}</option>
                 </select>
             </div>

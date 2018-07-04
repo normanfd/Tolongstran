@@ -125,10 +125,5 @@ class PostController extends Controller
     public function showelektronik (Post $post) {
         return view('post.showelektronik', compact('post','id')); }
     
-    public function transaction (Post $post) {
-        $users = User::where('id',$post->user_id)->get();
-        
-        return view('post.transaction',compact('post','id','users')); }
     
-        
 }
