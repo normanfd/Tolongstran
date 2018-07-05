@@ -1,5 +1,5 @@
-
 @extends('layouts.img')
+
 @section('content')
 <style>
 body{margin-top:20px;}	
@@ -32,7 +32,7 @@ body{margin-top:20px;}
         <h3>Profil</h3>
         
           <div class="form-group">
-            <label class="col-lg-3 control-label">Username</label>
+            <label class="col-lg-3 control-label">username</label>
             <div class="col-lg-8">
               <input class="form-control" name="username" type="text" value="{{AUth::user()->username}}" >
             </div>

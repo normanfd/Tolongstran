@@ -1,4 +1,5 @@
-@extends('layouts.img')
+@extends('layouts.img1')
+
 @section('content')
 <style>
 body{margin-top:20px;}	
@@ -32,7 +33,7 @@ body{margin-top:20px;}
         <form class="form-horizontal" action="{{ route('user.updatemyaccount') }}" role="form" method="post">
            {{ csrf_field() }}   
           <div class="form-group">
-            <label class="col-lg-3 control-label">UserName</label>  
+            <label class="col-lg-3 control-label">Username</label>  
             <div class="col-lg-8">
               <input class="form-control" name="username" type="text" value="{{AUth::user()->username}}" >
             </div>
