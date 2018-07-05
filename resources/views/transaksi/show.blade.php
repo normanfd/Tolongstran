@@ -21,7 +21,7 @@
                             @endforeach
                             </label>
                             
-                            <h5>Nama Barang:</h5>
+                            <h5>Nama Barang2:</h5>
                     <div>        
                     @foreach ($posts as $post)
                         @if($post->id == $transaksi->id_barang)
