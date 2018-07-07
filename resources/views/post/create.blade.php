@@ -63,7 +63,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Jumlah Barang</label>
-                    <input type="number" name="jbarang" class="form-control{{ $errors->has('jbarang') ? ' is-invalid' : '' }}"  value="{{ old('jbarang') }}" required autofocus>
+                    <input type="number" onkeydown="javascript: return event.keyCode == 69 ? false : true" name="jbarang" class="form-control{{ $errors->has('jbarang') ? ' is-invalid' : '' }}"  value="{{ old('jbarang') }}" required autofocus>
                     <div class="col-md-6">
                         @if ($errors->has('jbarang'))
                             <span class="invalid-feedback">

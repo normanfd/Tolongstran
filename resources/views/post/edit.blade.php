@@ -1,4 +1,4 @@
-@extends('layouts.img')
+@extends('layouts.img1')
 @section('content')
 <div class="container">
     <div class="card">
@@ -14,7 +14,7 @@
                 <select name="user_id" id="" class="form-control">
                     @foreach ($users as $user)
                     {@if($user->id == Auth::User()->id)
-                  <option value="{{ $user->id}}">{{$user->name}}</option>
+                  <option value="{{ $user->id}}">{{$user->username}}</option>
                     @endif}
                     @endforeach
                 </select>

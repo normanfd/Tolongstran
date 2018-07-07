@@ -1,5 +1,5 @@
 
-@extends('layouts.img')
+@extends('layouts.img1')
 @section('content')
 <style>
 body{margin-top:20px;}	

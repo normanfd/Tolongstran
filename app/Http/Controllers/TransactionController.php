@@ -15,6 +15,24 @@ class TransactionController extends Controller
         $posts = post::all();
         $transaksis = transaksi::all();
         return view('transaksi.show', compact('transaksis','users','posts')); }
+    
+    public function acc() {
+            $users = User::all();
+            $posts = post::all();
+            $transaksis = transaksi::all();
+            return view('transaksi.acc', compact('transaksis','users','posts')); }
+    
+    public function pending() {
+                $users = User::all();
+                $posts = post::all();
+                $transaksis = transaksi::all();
+                return view('transaksi.pending', compact('transaksis','users','posts')); }
+    
+    public function reject() {
+                    $users = User::all();
+                    $posts = post::all();
+                    $transaksis = transaksi::all();
+                    return view('transaksi.reject', compact('transaksis','users','posts')); }                
 
     public function create (Post $post) {
         $users = User::where('id',$post->user_id)->get();
@@ -45,12 +63,20 @@ class TransactionController extends Controller
        $posts = Transaksi::where('status','2')->first();
        $posts->status = 3;
        $posts->save();
-       return redirect('/home')->with('success','Request Telah di Accept');
+       return redirect('/list')->with('success','Request Telah di Accept');
     }
 
     public function destroy(){
         $posts = Transaksi::where('status','2')->first();
-        $posts->delete();
-        return redirect('/home')->with('danger','Request Telah di Reject');
+        $posts->status = 0;
+        $posts->save();
+        return redirect('/list')->with('danger','Request Telah di Reject');
+     }
+
+     public function return(){
+        $posts = Transaksi::where('status','3')->first();
+        $posts->status = 1;
+        $posts->save();
+        return redirect('/acc')->with('info','Transaksi Selesai');
      }
 }

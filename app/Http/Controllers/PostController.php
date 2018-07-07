@@ -27,7 +27,7 @@ class PostController extends Controller
             'jbarang'=>'required|numeric',
             'hbarang'=>'required|numeric',
             'deskripsi'=>'required',
-            'gambar'=>'required|image',
+            'gambar'=>'required|mimes:jpeg,png,bmp,tiff|max:4096',
         ]);
             
         Post::create([

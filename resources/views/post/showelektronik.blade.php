@@ -1,4 +1,4 @@
-@extends('layouts.img')
+@extends('layouts.img1')
 
 @section('content')
 <div class="container">

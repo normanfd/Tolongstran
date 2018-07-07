@@ -54,6 +54,11 @@ Route::get('/post/elektronik/{post}', 'PostController@showelektronik')->name('po
 Route::get('/post/transaction/{post}', 'TransactionController@create')->name('transaksi.create');
 Route::post('/post/transaction/', 'TransactionController@store')->name('transaksi.store');
 Route::get('/list','TransactionController@show')->name('transaksi.show');
+Route::get('/acc','TransactionController@acc')->name('transaksi.acc');
+Route::get('/pending','TransactionController@pending')->name('transaksi.pending');
+Route::get('/reject','TransactionController@reject')->name('transaksi.reject');
+Route::post('/acc','TransactionController@return')->name('transaksi.return');
+
 Route::post('/list','TransactionController@update')->name('transaksi.update');
 Route::delete('/list', 'TransactionController@destroy')->name('transaksi.destroy');
 
