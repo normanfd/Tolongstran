@@ -69,11 +69,7 @@ html,body{
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
                             <li><a class="nav-link" href="{{ route('post.create') }}">Post Barang</a></li>
-<<<<<<< HEAD
                             <li><a class="nav-link" href="{{route('transaksi.show')}}">List Pinjaman</a></li>
-=======
-                            <li><a class="nav-link" href="#">List Pinjaman</a></li>
->>>>>>> ec6917847a9e0dd4e17c1a4617acd1e263af7fc7
                             <li><a class="nav-link" href="{{ route('aset') }}">Aset Saya</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

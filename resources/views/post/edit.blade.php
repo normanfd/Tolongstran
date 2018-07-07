@@ -73,6 +73,7 @@
                     </div>
                 </div>
                 <!-- autofokusnya masih bermasalah -->
+                <img src="/Tugas_RPL/storage/app/public/{{$post->gambar}}" alt="Gambar" height="128">
                 <div class="form-group">
                     <div class="input-field">
                         <input type="file" name="gambar" class="validate{{ $errors->has('gambar') ? ' is-invalid' : '' }}"  value="{{ $post->gambar }}" required autofocus >
