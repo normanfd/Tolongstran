@@ -10,7 +10,6 @@
                 {{csrf_field()}}
                 
             <div class="form-group">
-                <label for="">Username</label>
                 <select name="user_id" id="" class="form-control">
                     @foreach ($users as $user)
                     {@if($user->id == Auth::User()->id)

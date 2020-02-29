@@ -69,7 +69,7 @@ html,body{
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
-                            <li><a class="nav-link" href="{{ route('post.create') }}">Post Barang</a></li>
+                            <li><a class="nav-link" href="{{ route('post.create') }}">Tambahkan barang sewaan</a></li>
                             <li><a class="nav-link" href="{{route('transaksi.show')}}">List Pinjaman</a></li>
                             <li><a class="nav-link" href="{{ route('aset') }}">Aset Saya</a></li>
                             <li class="nav-item dropdown">

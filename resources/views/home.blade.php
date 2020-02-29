@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="card">
 	<div class="card-header">
-		Kategori
+		Kategori Barang
 	</div>
 	<div class="card-body">
 	<div class="row">
