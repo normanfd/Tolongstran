@@ -36,28 +36,28 @@ class TransactionController extends Controller
 
     public function create (Post $post) {
         $users = User::where('id',$post->user_id)->get();
-        
-        return view('transaksi.create',compact('post','id','users')); }
+        return view('transaksi.create',compact('post','users')); 
+    }
     
-        public function store(Request $request)
-        {
-            $this->validate(request(),[
-                
-                'jbarang'=>'required|numeric',
-                
-            ]);
-                
-            transaksi::create([
-                
-                'jbarang'=>request('jbarang'),
-                'id_pemilik'=>request('id_pemilik'),
-                'id_peminjam'=>request('id_peminjam'),
-                'status'=>request('status'),
-                'id_barang'=>request('id_barang')
-            ]);
-                
-            return redirect('/home')->with('success','Request Berhasil Ditambahkan');
-        }
+    public function store(Request $request)
+    {
+        $this->validate(request(),[
+            
+            'jbarang'=>'required|numeric',
+            
+        ]);
+            
+        transaksi::create([
+            
+            'jbarang'=>request('jbarang'),
+            'id_pemilik'=>request('id_pemilik'),
+            'id_peminjam'=>request('id_peminjam'),
+            'status'=>request('status'),
+            'id_barang'=>request('id_barang')
+        ]);
+            
+        return redirect('/home')->with('success','Request Berhasil Ditambahkan');
+    }
         
     public function update(){
        $posts = Transaksi::where('status','2')->first();

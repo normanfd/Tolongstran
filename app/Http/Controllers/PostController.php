@@ -22,6 +22,7 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
+        $userId = Auth::user()->id;
         $this->validate(request(),[
             'nbarang'=>'required',
             'jbarang'=>'required|numeric',
@@ -39,7 +40,7 @@ class PostController extends Controller
             'category_id' =>request('category_id'),
             $gambar=$request->file('gambar')->store('gambars'),
             'gambar'=>$gambar,
-            'user_id'=>request('user_id')
+            'user_id'=>$userId
         ]);
             
         return redirect('/home')->with('success','Data Berhasil Ditambahkan');
@@ -92,7 +93,7 @@ class PostController extends Controller
         return  view('post.indextoreadfurniture',compact('posts','id')); }
 
     public function showfurniture (Post $post) {
-        return view('post.showfurniture', compact('post','id')); }
+        return view('post.showfurniture', compact('post')); }
     
     public function kostum(){
         $id = Auth::user()->id;
@@ -100,7 +101,7 @@ class PostController extends Controller
         $posts=post::where('category_id', 2)-> get();
         return  view('post.indextoreadkostum',compact('posts','id')); }
     public function showkostum (Post $post) {
-        return view('post.showkostum', compact('post','id')); }
+        return view('post.showkostum', compact('post')); }
 
     public function tenda(){
         $id = Auth::user()->id;
@@ -108,7 +109,7 @@ class PostController extends Controller
        $posts=post::where('category_id', 5)-> get();
         return  view('post.indextoreadtenda',compact('posts','id')); }
     public function showtenda (Post $post) {
-        return view('post.showtenda', compact('post','id')); }
+        return view('post.showtenda', compact('post')); }
 
     public function musik(){
         $id = Auth::user()->id;
@@ -116,14 +117,14 @@ class PostController extends Controller
        $posts=post::where('category_id', 3)-> get();
         return  view('post.indextoreadmusik',compact('posts','id')); }
     public function showmusik (Post $post) {
-        return view('post.showmusik', compact('post','id')); }
+        return view('post.showmusik', compact('post')); }
     
     public function elektronik(){
         $id = Auth::user()->id;
        $posts=post::where('category_id', 4)-> get();
         return  view('post.indextoreadelektronik',compact('posts','id')); }
     public function showelektronik (Post $post) {
-        return view('post.showelektronik', compact('post','id')); }
+        return view('post.showelektronik', compact('post')); }
     
     
 }

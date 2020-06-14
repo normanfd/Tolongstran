@@ -33,7 +33,7 @@ Route::get('/user/myaccount/edit', 'myaccountController@editmyaccount')->name('u
 Route::post('/user/myaccount/edit', 'myaccountController@updatemyaccount')->name('user.updatemyaccount');
 
 Route::get('/post/create', 'PostController@create')->name('post.create');
-Route::post('/post/create', 'PostController@store')->name('post.store');
+Route::post('/post/create', 'PostController@store')->name('post.store'); 
 
 Route::get('/post/furniture', 'PostController@furniture')->name('furniture');
 Route::get('/post/furniture/{post}', 'PostController@showfurniture')->name('post.showfurniture');
